@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <!-- Campo de Correo Electrónico -->
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required email #emailModel="ngModel"></ion-input>
+    </ion-item>
+    <!-- Mensaje de error para correo -->
+    <ion-text *ngIf="emailModel.invalid && emailModel.touched" color="danger">
+      <small *ngIf="emailModel.errors?.['required']">El correo es obligatorio.</small>
+      <small *ngIf="emailModel.errors?.['email']">El correo no tiene un formato válido.</small>
+    </ion-text>
+
+    <!-- Campo de Contraseña -->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password" required minlength="6" #passwordModel="ngModel"></ion-input>
+    </ion-item>
+    <!-- Mensaje de error para contraseña -->
+    <ion-text *ngIf="passwordModel.invalid && passwordModel.touched" color="danger">
+      <small *ngIf="passwordModel.errors?.['required']">La contraseña es obligatoria.</small>
+      <small *ngIf="passwordModel.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</small>
+    </ion-text>
+
+    <!-- Botón de Iniciar Sesión -->
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" [disabled]="!loginForm.form.valid">Iniciar Sesión</ion-button>
+    </div>
+  </form>
+
+  <!-- Botón de Registro -->
+  <div class="ion-padding">
+    <ion-button expand="block" color="secondary" (click)="register()">Registrarse</ion-button>
+  </div>
+  
+  <!-- Botones de acceso rápido -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="secondary" (click)="iniciar_admin()">Iniciar como admin</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="secondary" (click)="iniciar_usu()">Iniciar como usuario</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="secondary" (click)="iniciar_profe()">Iniciar como profe</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Mensaje de error general -->
+  <ion-text *ngIf="errorMessage" color="danger">
+    <p>{{ errorMessage }}</p>
+  </ion-text>
+
+</ion-content>
