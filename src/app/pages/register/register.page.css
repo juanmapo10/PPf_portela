@@ -1,0 +1,58 @@
+/* Estilos para el encabezado */
+ion-header {
+    background-color: #d32f2f; /* Rojo oscuro para el encabezado */
+  }
+  
+  ion-toolbar {
+    --background: #d32f2f; /* Color de la barra del toolbar */
+  }
+  
+  ion-title {
+    color: white; /* Color del título en blanco */
+  }
+  
+  /* Estilos para el contenido */
+  ion-content {
+    background-color: #f9f9f9; /* Color de fondo del contenido */
+  }
+  
+  /* Estilos para mensajes de error y éxito */
+  .error-message,
+  .success-message {
+    margin-bottom: 16px; /* Espaciado inferior */
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .error-message {
+    background-color: rgba(211, 47, 47, 0.1); /* Fondo claro para el mensaje de error */
+    color: #d32f2f; /* Color del texto de error */
+  }
+  
+  .success-message {
+    background-color: rgba(244, 67, 54, 0.1); /* Fondo claro para el mensaje de éxito */
+    color: #e57373; /* Color del texto de éxito (tono de rojo más claro) */
+  }
+  
+  /* Estilos para los elementos del formulario */
+  ion-item {
+    margin-bottom: 16px; /* Espaciado inferior entre elementos del formulario */
+  }
+  
+  /* Estilos para los mensajes de validación */
+  ion-text {
+    font-size: 14px; /* Tamaño del texto para mensajes de validación */
+    margin-top: 4px; /* Espaciado superior */
+  }
+  
+  /* Estilo para el botón de registro */
+  ion-button {
+    background-color: #d32f2f; /* Rojo oscuro para el botón */
+    color: white; /* Color del texto del botón */
+  }
+  
+  ion-button:disabled {
+    background-color: #f5c6c6; /* Rojo claro cuando el botón está deshabilitado */
+    color: #ffffff; /* Color del texto cuando está deshabilitado */
+  }
+  

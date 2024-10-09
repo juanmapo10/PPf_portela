@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, FormsModule, IonicModule],
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  styleUrls: ['./login.page.css'],
 })
 export class LoginPage {
 
@@ -25,6 +25,7 @@ export class LoginPage {
       const user = await signInWithEmailAndPassword(this.afAuth ,this.email, this.password);
       if (user) {
         this.router.navigateByUrl('/home'); 
+        this.limpiar_visor();
       }
     } catch (error:any) {
       this.errorMessage = this.getErrorMessage(error.code); // Mostrar mensaje de error
@@ -35,22 +36,28 @@ export class LoginPage {
     this.router.navigateByUrl('/register');
   }
 
+  limpiar_visor()
+  {
+    this.email = "";
+    this.password = "";
+  }
+
   iniciar_admin()
   {
-  this.email = "j@j.com"
-  this.password = "1234567"
+  this.email = "admin@admin.com"
+  this.password = "111111"
 
   }
   iniciar_profe()
   {
-  this.email = "profe@profe.com"
-  this.password = "river123"
+  this.email = "invitado@invitado.com"
+  this.password = "222222"
 
   }
   iniciar_usu()
   {
-  this.email = "usu@usu.com"
-  this.password = "usuario10"
+  this.email = "usuario@usuario.com"
+  this.password = "333333"
 
   }
 

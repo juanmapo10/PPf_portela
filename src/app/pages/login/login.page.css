@@ -1,0 +1,96 @@
+/* Global styles for the login component */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #292929; /* Fondo oscuro */
+    margin-top: 50px; /* Desplaza todo el contenido hacia abajo */
+}
+
+/* Caja envolvente del formulario */
+.form-box {
+    background-color: #3e3e3e; /* Fondo gris más claro */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para destacar la caja */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo de la caja */
+}
+
+ion-header {
+    background-color: #c62828; /* Fondo rojo del header */
+}
+
+ion-toolbar {
+    --background: #c62828; /* Fondo rojo del toolbar */
+}
+
+ion-title {
+    color: white; /* Texto blanco en el título */
+}
+
+/* Formulario */
+form {
+    width: 100%;
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo de los campos (inputs) */
+ion-item {
+    margin-bottom: 20px; /* Espacio entre campos más grande */
+    background-color: #333333; /* Fondo gris oscuro para los inputs */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+}
+
+ion-label {
+    color: #f1f1f1; /* Texto claro en los labels */
+}
+
+ion-input::part(native) {
+    padding-left: 10px; /* Margen interno del texto */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Botones */
+.button-container {
+    text-align: center;
+    margin-top: 25px; /* Espaciado superior para los botones */
+}
+
+ion-button {
+    width: 100%; /* Ancho completo del botón */
+    background-color: #c62828; /* Fondo rojo en botones */
+    color: rgb(255, 255, 255); /* Texto blanco */
+
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+/* Mensajes de error */
+ion-text {
+    margin-top: 5px; /* Espacio superior para mensajes de error */
+    font-size: 14px; /* Tamaño del texto de error */
+}
+
+ion-text[color='danger'] {
+    color: #d32f2f; /* Rojo oscuro para mensajes de error */
+}
+
+/* Cuadrícula de botones de acceso rápido */
+ion-grid {
+    margin-top: 30px; /* Espacio superior para la cuadrícula */
+}
+
+ion-col {
+    display: flex; /* Flex para centrar botones */
+    justify-content: center;
+}
+
+ion-button[disabled] {
+    --background: #bcbcbc; /* Fondo gris claro para botones deshabilitados */
+    --color: #ff0000; /* Texto blanco */
+}
